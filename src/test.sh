@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#scr/test.sh
+#src/test.sh
 EXPECTED="Hello, Test!"
 
-OUTPUT=$(node -e "console.log(require('./scr/app')('Test'))")
+OUTPUT=$(node -e "console.log(require('./src/app')('Test'))")
 
 if [ "$OUTPUT" == "$EXPECTED" ]; then
   
