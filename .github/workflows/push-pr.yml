@@ -1,0 +1,20 @@
+on:
+    push:  #Triggering on push requests
+         branches: #List 
+             - main
+             - "release/**" #Globbing : asterisk means triggering all the branches that start with "release"
+         paths:
+             - "src/**"   #Globbing.Triggering on paths containing "src"  
+    pull_request:  #Triggering on pull requests
+        branches:  
+            - main
+            - "release/**" 
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout code 
+          uses: actions/checkout@v7.0.1
+        
+        - name: Run tests
+          run: npm test #npm : node package manager associated to Node.js , it's a runtime or framework for Java Script.
