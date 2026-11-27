@@ -18,4 +18,5 @@ jobs:
         
         - name: Run tests
           #working-directory: src/ 
+          #working-directory: src/
           run: npm test #npm : node package manager associated to Node.js , it's a runtime or framework for Java Script.
